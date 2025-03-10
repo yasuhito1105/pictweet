@@ -35,7 +35,7 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
-  def search         # この処理は７つのアクションには無い機能
+  def search         # この処理は７つのアクションには無い検索機能
     @tweets = Tweet.search(params[:keyword])
   end
 
